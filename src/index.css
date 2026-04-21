@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100;
+}
+
+@layer components {
+  .section-divider {
+    @apply border-t border-neutral-200 dark:border-neutral-800;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-1.5 bg-neutral-900 dark:bg-neutral-100
+           text-white dark:text-neutral-900 font-medium text-sm
+           px-5 py-2.5 rounded-xl transition-opacity duration-150 hover:opacity-75
+           cursor-pointer border-none;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-1.5 border border-neutral-200
+           dark:border-neutral-700 text-neutral-500 dark:text-neutral-400
+           font-medium text-sm px-5 py-2.5 rounded-xl transition-all duration-150
+           hover:border-neutral-900 dark:hover:border-neutral-100
+           hover:text-neutral-900 dark:hover:text-neutral-100 cursor-pointer
+           bg-transparent;
+  }
+  .nav-btn {
+    @apply text-sm text-neutral-500 dark:text-neutral-400 capitalize
+           transition-colors duration-150 hover:text-neutral-900
+           dark:hover:text-neutral-100 bg-transparent border-none
+           cursor-pointer font-normal;
+  }
+  .skill-pill {
+    @apply bg-neutral-100 dark:bg-neutral-800 text-neutral-700
+           dark:text-neutral-300 border border-neutral-200
+           dark:border-neutral-700 text-sm font-medium px-4 py-1.5 rounded-md;
+  }
+  .tech-badge {
+    @apply bg-neutral-100 dark:bg-neutral-800 text-neutral-600
+           dark:text-neutral-400 border border-neutral-200
+           dark:border-neutral-700 text-xs font-medium px-3 py-1 rounded-full;
+  }
+  .contact-card {
+    @apply flex items-center gap-3 border border-neutral-200 dark:border-neutral-700
+           rounded-xl px-4 py-3.5 max-w-sm text-neutral-500 dark:text-neutral-400
+           transition-all duration-200 hover:border-neutral-900
+           dark:hover:border-neutral-100 hover:text-neutral-900
+           dark:hover:text-neutral-100;
+  }
+  .contact-icon-wrap {
+    @apply w-9 h-9 rounded-lg bg-neutral-100 dark:bg-neutral-800
+           flex items-center justify-center flex-shrink-0;
+  }
+}
