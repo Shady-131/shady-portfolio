@@ -1,0 +1,5 @@
+# Update the domain below to your live URL after deploying.
+User-agent: *
+Allow: /
+
+Sitemap: https://shady-portfolio.vercel.app/sitemap.xml

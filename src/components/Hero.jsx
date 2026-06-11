@@ -1,24 +1,6 @@
 import heroImg from '../assets/hero.png'
 import { scrollTo } from '../utils/scroll'
-
-function IconDownload() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 5v14M5 12l7 7 7-7" />
-      <line x1="5" y1="20" x2="19" y2="20" />
-    </svg>
-  )
-}
-
-function IconArrow() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M7 17L17 7M7 7h10v10" />
-    </svg>
-  )
-}
+import { IconDownload, IconArrow } from './ui/icons'
 
 export default function Hero() {
   return (
@@ -42,9 +24,10 @@ export default function Hero() {
 
           <p className="text-base text-neutral-500 dark:text-neutral-400
                         leading-relaxed max-w-md mb-8">
-            Computer Science student crafting scalable, responsive web
-            applications — currently focused on helping small businesses
-            establish a strong online presence.
+            I build practical, responsive websites and web apps with a clean,
+            fast user experience — helping small businesses establish a strong
+            online presence. Computer Science student with a practical,
+            product-focused approach to building for the web.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -69,6 +52,11 @@ export default function Hero() {
             <img
               src={heroImg}
               alt="Shady — Full-Stack Developer"
+              width={1176}
+              height={1280}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>

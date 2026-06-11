@@ -1,16 +1,39 @@
-# React + Vite
+# Shady — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Shady, a full-stack web developer. Built as a fast,
+single-page React app and deployed on Vercel.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 18** + **Vite 5**
+- **Tailwind CSS 3** (dark mode follows the system preference)
+- Scroll-reveal via the native `IntersectionObserver`
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install      # install dependencies
+npm run dev      # start the dev server
+npm run build    # production build to /dist
+npm run preview  # preview the production build locally
+npm run lint     # run ESLint
+```
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+  components/        UI sections (Hero, About, Skills, Projects, …)
+    ui/              Shared primitives (icons, FadeSection, SectionLabel, …)
+  data/portfolio.js  All editable content (links, projects, skills, contact)
+  hooks/             useFadeIn scroll-reveal hook
+  utils/             scroll helper
+public/              Static assets (CV, favicon)
+```
+
+## Editing content
+
+Most content lives in [`src/data/portfolio.js`](src/data/portfolio.js):
+nav links, skills, projects, experience and contact details. To show a
+project's **View Code** button, set that project's `code` field to a real
+repository URL (it stays hidden while `code` is `null`).

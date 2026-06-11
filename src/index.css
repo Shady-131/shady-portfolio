@@ -6,6 +6,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Respect users who prefer reduced motion: drop smooth scroll and near-zero
+   out all transitions/animations, while keeping content fully visible. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   @apply bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100;
 }

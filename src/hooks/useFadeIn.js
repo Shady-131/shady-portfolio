@@ -7,6 +7,14 @@ export function useFadeIn() {
     const el = ref.current
     if (!el) return
 
+    // Honor reduced-motion: show content immediately, skip the reveal animation.
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduceMotion) {
+      el.classList.add('opacity-100', 'translate-y-0')
+      el.classList.remove('opacity-0', 'translate-y-6')
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
