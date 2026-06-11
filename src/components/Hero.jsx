@@ -37,7 +37,7 @@ export default function Hero() {
             <button onClick={() => scrollTo('contact')} className="btn-outline">
               Get in touch
             </button>
-            <a href="/cv.pdf" download className="btn-outline">
+            <a href="/cv.pdf" download="Shady-Gamel-CV.pdf" className="btn-outline">
               <IconDownload /> Download CV
             </a>
           </div>

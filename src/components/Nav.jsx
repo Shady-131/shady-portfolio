@@ -34,7 +34,7 @@ export default function Nav() {
               {s}
             </button>
           ))}
-          <a href="/cv.pdf" download className="btn-outline py-1.5 px-3 text-xs rounded-lg">
+          <a href="/cv.pdf" download="Shady-Gamel-CV.pdf" className="btn-outline py-1.5 px-3 text-xs rounded-lg">
             <IconDownload size={13} /> CV
           </a>
         </div>
@@ -69,7 +69,7 @@ export default function Nav() {
           ))}
           <a
             href="/cv.pdf"
-            download
+            download="Shady-Gamel-CV.pdf"
             onClick={() => setOpen(false)}
             className="btn-outline mt-2 py-2 px-3 text-xs rounded-lg self-start"
           >
